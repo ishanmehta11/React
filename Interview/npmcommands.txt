@@ -1,0 +1,25 @@
+npm commands
+1. initize npm :
+this wll skipn options    : npm init -y
+this will ask for details :npm init
+
+2. install pacakge : 
+
+npm install packagename
+	or
+npm i packagename
+npm install packagename -D 
+npm install packagename --save-dev 
+
+here -D stands for Dev Dependency and it means Pacakage should be installed in dev machine only 
+
+we can also use --save-dev instead of using -Dependency
+
+3. 
+start parcel or dev build
+
+npx parcel entrypoint of app
+eg . npxparcel index.html
+
+4. create prod build 
+npx parcel build index.html

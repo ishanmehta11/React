@@ -1,0 +1,55 @@
+1. What is NPM?
+ NPM is a package manager and with this we can install more packages inside our project.
+ 
+2.- What is `Parcel/Webpack`? Why do we need it?
+Parcel/Webpack these are the Bundlers.
+we need bundlers to impore performance of application as bundlers with minify the code , optimize the code and create a server.
+
+3. What is .parcel-cache?
+it is auto generated folder when we create dev build and subsequent builds are created using the same folder and .parcel-cache is being used in subsequent builds to improve the performance hence caching is achived by this.
+
+4. What is NPX?
+it mean execute using npm, Node Package Execute ,
+
+5. What does ~(Tilde ) and ^(caret) means in pacakge.json? 
+Ans. ^ is used to auto upgrade minor version
+~ is used to auto upgrade major version.
+
+6. Pacakge.Json and Package-lock.json?
+Ans. Package.json will have the version details of package with ~ or ^ symbol.
+Package-lock.json will lock/store the current version of pacakge , it keeps the track of exact version of package.
+Never put pacakge-lock.json in gitignore.
+
+7.What is `node_modules` ? Is it a good idea to push that on git?
+Ans.
+Inside `node_modules` all pacakges are getting installed .
+we should not push `node_modules` on git.
+
+8. What is Hot Module Replacement?
+Ans. Hot Module Replacement (HMR) exchanges, adds, or removes modules while an application is running, without a full reload.
+eg. Parcel is uses file watcher algorithm to track which files are changed.
+
+9.What is the `dist` folder?
+ans. after creating build parcel will put the files inside dist folder.
+
+10. Parcel Features 
+Ans :
+
+1. Hot Module Replacement
+2. Bundling
+3. Image Optimization
+4. Tree Shaking
+5. Code cleaning
+6. FileWatcher Algorithm
+7. Minification
+8. Dev and Prod build
+9. Compatible with older version of browser
+10. HTTPS on dev
+11. Manages Port number
+12. uses Consistent hashing algorithm 
+13. Transitive dependencies : dependency tree , one dependency have dependency on another and so on.
+
+11. What is Tree Shaking?
+Ans. It is the process of removing unwanted code.
+suppose we are using a library which is having 10 functions and in our code we are using 2 out of them then remaining 8 unused functions code will be removed.
+
