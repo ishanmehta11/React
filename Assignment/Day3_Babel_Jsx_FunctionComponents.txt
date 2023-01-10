@@ -1,0 +1,91 @@
+1.
+PolyFill -> When browser doesn't understand new code or syntax then replacing new code or syntax to older syntax is known as polyfil.
+Babel does the polyfill.
+Babel is transpiler.
+2. 
+JSX : javascript xml
+JSX is html like javascript.
+eg :
+const jsxHeading=(
+<h1 id="jsxHeadng1" key="jsxHeadingKey">
+    this is demo
+</h1>
+);
+
+use it like this :
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxHeading); 
+
+internally jsx is React.CreateElement() , this gives an object which is rendered as html DOM.
+JSX is syntax for creating react elements.
+3.
+Diffing Algorith , Recoincilation
+
+4. 
+React Component : 
+Functional Component 
+Class Based Component 
+Functional Component : Basically its a javascript function which return a react element.
+Its should start from capital letter. if it doesn't start from capital letter , react would treat as html tag. eg:
+
+const HeaderComponent =()=>{
+return <h1>function Component</h1>;
+};
+
+multiple line : const FooterComponent =()=>{
+    return(
+        <h1>footer</h1>
+    );
+};
+In arrow functions return is not mandatory , so below code is also fine : 
+const HeaderComponent =()=>{
+<h1>function Component</h1>;
+};
+use it like this : 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeaderComponent/>); 
+
+we can use react element(jsx) inside the component , bcoz jsx is normal js variable and component is js function , syntax inside {} we can add the react element(jsx): 
+
+const jsxHeading=(
+<h1 id="jsxHeadng1" key="jsxHeadingKey">
+    this is demo
+</h1>
+);
+
+const HeaderComponent =()=>{ return (
+<div>
+{jsxHeading}
+<h2>function Component</h2>
+</div>
+);
+};
+
+Component Composition : we can call a functional component inside another functional component eg.
+
+
+const HeaderComponent =()=>{
+return <h1>function Component</h1>;
+};
+
+const FooterComponent =()=>{
+    return(
+	<div>
+	{HeaderComponent()}
+        <h1>footer</h1>
+		</div>
+    );
+};
+OR 
+
+const FooterComponent =()=>{
+    return(
+	<div>
+	{<HeaderComponent/>}
+        <h1>footer</h1>
+		</div>
+    );
+};
+
+Inside functional component we can write any js code inside  {} braces.

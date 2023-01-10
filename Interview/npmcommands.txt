@@ -23,3 +23,14 @@ eg . npxparcel index.html
 
 4. create prod build 
 npx parcel build index.html
+5.
+npm run is equivalent npx
+
+use npm run start to run or start
+use npm build for build 
+ define start and build in package.json inside scripts
+ eg .
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcle build index.html",
+  },
