@@ -1,0 +1,44 @@
+1. Comment in JSX
+ans. //comments
+eg 
+var element = (
+//comments in jsx
+/*multiline comments
+*
+*
+8/
+<h1> vfbfnbfvn</h1>
+);
+ 
+2. What is <React.Fragment> </React.Fragment> or <> </>
+ans. this is component exported by react
+jsx can have only have one parent.
+React.Fragment is like an empty tag. 
+
+3. What is Recoinsilation in React?
+Ans . Recoinsilation is an algo which react uses to differentiate one tree with other (actual dom vs virtual dom). with this react determines what needs to be updated on dom. 
+Diff algo.
+
+4. What is React Fiber ? 
+Ans. 
+
+5. Why we need keys in React ? When we need keys in React?
+Ans.
+When we have multiple children with same attribute or same tag / type then react won't be able to determine which is updated or lets take an example  :
+ 3 <div > are there and we have added one more div on top react won't be able to identify in which position new element is added , to identify this we need to add keys. If we don't add key react will rerender all 4 divs and if add key only newly added element will be rendered.
+ 
+ It is a good practice to add keys , but if we have multiline children of same type then key must be used.
+ 
+
+
+6. Can we use Index as key in React?
+ans. It is not advisible and not a good practice to use index as key.We should always give unique name to key . But if we don't have somthing unique then we can use Index.
+
+7. Object DeStructring?
+ans .
+fetching properties of object in below format : 
+const {name , age , gender} = employeobj;
+
+Virtual DOM?
+it is a representation of actual dom.
+2:45 hours
