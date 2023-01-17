@@ -1,0 +1,51 @@
+hooks: 
+1. What is diff b/w Named export , Default export and * as export?
+Ans.
+Deafult Export : By default it we can export one object.
+syntax (export):  export default Header.
+syntax (Import) : import Header from "./header"
+
+Named Export : when we want to export extra objects than deafult export , then named export is used.
+with object creation will use export keyword as below : 
+syntax(export) : 
+export const Title = () =>{
+    return (
+   <h1>named export</h1>
+    );
+    };
+	
+syntax(import) : 
+import {Title} from "./header"
+
+* as export : 
+in this case we can combine muliple exports in single name and use with .
+eg 
+import * as obj from "./header"
+Title can be used like this
+{obj.Title}
+
+Note : In Deafult case while importing we can give any name to object , but in named export same name should be used while importing.
+
+we can use default and named import together like this : 
+import Header , {Title} from "./Header"
+considering Header id deafult export and Tilte is named export in Header.js file
+
+2. What is use of config.js?
+ans. 
+
+3. What is a Hook?
+ans. Hook is a normal JS function 
+
+4. Why do we need useState Hook?
+ans.  useState is used to create state variables.
+useState comes from react library and we use it by named import.
+useState() , returns an array first element is the variable name , and second is the function by w
+
+eg. 
+const [searchText , setSearchText] = useState("");
+
+searchText is a local state variable.
+React will track only state variable
+
+
+1:16
