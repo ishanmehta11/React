@@ -23,6 +23,7 @@ eg . npxparcel index.html
 
 4. create prod build 
 npx parcel build index.html
+
 5.
 npm run is equivalent npx
 
@@ -34,3 +35,6 @@ use npm build for build
     "start":"parcel index.html",
     "build":"parcle build index.html",
   },
+npm start will also work as npm run start
+
+6. 

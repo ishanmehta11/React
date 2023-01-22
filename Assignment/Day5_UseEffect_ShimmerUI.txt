@@ -1,0 +1,53 @@
+1. What is use of UseEffect Hook??
+Ans. useEffect is a React Hook that lets you synchronize a component with an external system.
+
+Synchronizing with Effects : 
+Some components need to synchronize with external systems. For example, you might want to control a non-React component based on the React state, set up a server connection, or send an analytics log when a component appears on the screen. Effects let you run some code after rendering so that you can synchronize your component with some system outside of React.
+
+Example : 
+import { useEffect } from 'react';
+import { createConnection } from './chat.js';
+
+function ChatRoom({ roomId }) {
+  const [serverUrl, setServerUrl] = useState('https://localhost:1234');
+
+  useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+    return () => {
+      connection.disconnect();
+    };
+  }, [serverUrl, roomId]);
+  // ...
+}
+
+useEffect has two parameters : 
+1.CallBack function
+2.Dependency array
+
+// empty dependency array => once after render
+
+// dep arry [searchText] => once after initial render + everytime after reder (my searchText changes)
+
+If Dependency array is empty then useEffect will be called once after initial rendering
+
+If Dependency array is not empty then useEffect will be called on once after initial render + change of the dependency.
+
+UseEffect will be called after the component is rendered.
+
+If dependency array is not passed inside useEffect then it will be called after each render.
+
+2. What is optional chaining?
+ans. 
+
+3. Conditional Rendering?
+ans.
+In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+
+Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+example:
+return (allRestaurants?.length===0) ? <Shimmer/> :<Body/>
+
+
+
+ 2:46

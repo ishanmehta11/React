@@ -45,7 +45,11 @@ eg.
 const [searchText , setSearchText] = useState("");
 
 searchText is a local state variable.
-React will track only state variable
 
+React will track only state variable.
+if we create a normal js variable and value is changed, react won't know that it has be rendered bcoz react don't track normal JS variables.
+React only tracks state variables and State variables are created by useState().When state variable value is changed then react will know about it and automatic rerender will happen.
 
-1:16
+When a statevariable is changed then the whole component will be rerendered bcoz its state is updated 
+and the reason why whole component is rerendering is that state variable could be used muliple times inside the component
+

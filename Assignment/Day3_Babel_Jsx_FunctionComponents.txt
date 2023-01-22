@@ -62,7 +62,7 @@ const HeaderComponent =()=>{ return (
 );
 };
 
-Component Composition : we can call a functional component inside another functional component eg.
+Component Composition : we can call a functional component inside another functional component or nested components. eg.
 
 
 const HeaderComponent =()=>{
@@ -82,7 +82,7 @@ OR
 const FooterComponent =()=>{
     return(
 	<div>
-	{<HeaderComponent/>}
+	<HeaderComponent/>
         <h1>footer</h1>
 		</div>
     );
