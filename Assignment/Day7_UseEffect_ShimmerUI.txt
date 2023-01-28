@@ -1,0 +1,24 @@
+1. React says Never create a component inside a component , keep it 
+2. Never ever write usestate() inside if else and for loop, it will create inconsistency
+3. Never use usestate() outside functional component.
+
+Q1. What is CSR and SSR
+ANS. Types of Routing : 
+Client Side Routing : In this page will load from client only.Page is already there on our app , any n/w call won't be there to load the route.
+
+Server side Roting : 
+In this page is coming from server. there will be a n/w call to load the page.
+
+Link is later would appear as <a> tag in dom when we'll see the elements ,
+but react-router-dom keeps an track of all the Link created by react
+
+Q2. Nested Routing 
+Ans.
+we need to use <Outlet> for nested routing.
+all children will go in outlet according to route
+
+Q3. Dynamic routing
+ans. Pass some unique id in route / url and load data according to page.
+eg swigy passes restuarnat name in url and then specific restuarnat page is opened.
+dynmic routing can be implemented by useParams hook provided by react-router-dom
+
